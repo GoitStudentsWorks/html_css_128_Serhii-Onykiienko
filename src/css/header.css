@@ -27,6 +27,8 @@
   outline: 2px solid orange;
   outline-offset: -2px;
 }
+
+/* кінець коммонів */
 /* сам хедер */
 
 .header-section {
@@ -48,13 +50,8 @@
   height: 60px;
   object-fit: contain;
 }
-.menu-open-btn {
-  /* Прибираємо стандартні стилі кнопки */
-  padding: 0;
-  line-height: 0;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  width: 44px;
-  height: 32px;
+.burger-btn {
+}
+.burger-icon {
+  fill: #fff;
 }

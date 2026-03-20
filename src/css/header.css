@@ -1,0 +1,60 @@
+/* #region Common */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  /* Мобільна версія */
+  min-width: 320px;
+  max-width: 375px;
+
+  /* Планшет */
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  /* Десктоп */
+  @media screen and (min-width: 1280px) {
+    max-width: 1280px;
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+
+  /* дебаг-код (рамка) */
+  outline: 2px solid orange;
+  outline-offset: -2px;
+}
+/* сам хедер */
+
+.header-section {
+  background-color: #5e8a4d;
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.logo-img {
+  display: block;
+  width: 142px; /* Розмір з Figma */
+  height: 60px;
+  object-fit: contain;
+}
+.menu-open-btn {
+  /* Прибираємо стандартні стилі кнопки */
+  padding: 0;
+  line-height: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 44px;
+  height: 32px;
+}

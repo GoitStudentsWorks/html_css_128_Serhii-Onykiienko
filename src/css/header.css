@@ -1,36 +1,11 @@
 /* #region Common */
 .container {
-  width: 100%;
-  margin: 0 auto;
-  padding-left: 16px;
-  padding-right: 16px;
-
-  /* Мобільна версія */
-  min-width: 320px;
-  max-width: 375px;
-
-  /* Планшет */
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-  /* Десктоп */
-  @media screen and (min-width: 1280px) {
-    max-width: 1280px;
-    padding-left: 64px;
-    padding-right: 64px;
-  }
-
   /* дебаг-код (рамка) */
   outline: 2px solid orange;
   outline-offset: -2px;
 }
-
 /* кінець коммонів */
 /* сам хедер */
-
 .header-section {
   background-color: #5e8a4d;
   width: 100%;
@@ -41,8 +16,10 @@
   align-items: center;
   justify-content: space-between;
   min-height: 60px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding: 6px 16px;
+}
+.header-nav {
+  display: none;
 }
 .logo-img {
   display: block;
@@ -50,8 +27,143 @@
   height: 60px;
   object-fit: contain;
 }
-.burger-btn {
+/* Order button */
+/* --- БАЗОВІ СТИЛІ (Mobile) --- */
+
+/* Спочатку ховаємо посилання */
+.order-link {
+  display: none;
 }
+/* Контейнер для правої частини */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* відступ між кнопкою і бургером */
+}
+/* Бургер кнопка */
+.burger-btn {
+  width: 44px;
+  height: 44px;
+
+  display: flex; /* центрує SVG іконку всередині кнопки */
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* щоб іконка не "тікала" від країв */
+  line-height: 0; /* прибирає фантомні відступи знизу */
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .burger-icon {
+  height: 24px;
+  width: 24px;
   fill: #fff;
+}
+@media screen and (min-width: 768px) {
+  .header-container {
+    /* 1. Вказуємо, що падінги входять у ширину 768px */
+    box-sizing: border-box;
+
+    /* 2. Повна ширина планшетного екрана */
+    width: 100%;
+    max-width: 768px;
+
+    /* 3. Центруємо контейнер */
+    margin-left: auto;
+    margin-right: auto;
+
+    /* 4. Відступи всередині (768 - 32 - 32 = 704px для контенту) */
+    padding: 6px 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .order-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 92px;
+    height: 32px;
+    box-sizing: border-box;
+
+    background-color: #1a5901;
+    color: #ffffff;
+    border: 1px solid #1a5901;
+    border-radius: 6px;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .order-link:hover,
+  .order-link:focus {
+    background-color: transparent;
+    color: #1a5901;
+  }
+  .header-actions {
+    display: flex;
+    align-items: center; /* Центрує кнопку 32px по вертикалі відносно іконки 44px */
+    gap: 12px;
+  }
+}
+
+/* --- ДЕСКТОП (1440px+) --- */
+@media screen and (min-width: 1440px) {
+  .header-container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 6px 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  /* Навігація */
+  .header-nav {
+    display: block;
+    /* Зміщуємо меню ближче до правої частини */
+    margin-left: auto;
+    margin-right: 44px;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .nav-link:hover,
+  .nav-link:focus {
+    color: #1a5901;
+  }
+
+  /* Ховаємо бургер, він тут не потрібен */
+  .burger-btn {
+    display: none;
+  }
 }

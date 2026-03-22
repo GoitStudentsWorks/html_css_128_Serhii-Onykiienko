@@ -1,0 +1,158 @@
+.contacts.section {
+    padding: 100px 0;
+    background-color: #f9f8f8;
+    color: #010400;
+    
+}
+
+/* Заголовки */
+.subtitle {
+    display: block;
+    color: #010400;
+    font-family: "Public Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.title {
+    color: #010400;
+    font-family: 'Chivo', sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin-bottom: 24px;
+}
+.title-text {
+    color: #010400;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    
+}
+
+.contacts-content {
+    display: flex;
+    flex-direction: column;
+    /* Вибудовує елементи в колонку */
+    align-items: flex-start;
+    /* Центрує текст і форму по горизонталі (якщо потрібно) */
+    gap: 32px;
+    /* Відступ між текстом/контактами та формою */
+    margin-top: 40px;
+}
+.method-item:last-child .contact-link {
+    margin-bottom: 0;
+}
+
+
+.form-group:first-child label {
+    margin-top: 0;
+}
+/* Контактні дані */
+.contacts-methods {
+    flex: 1;
+}
+
+.method-item {
+    margin-bottom: 20px;
+}
+
+.contact-link {
+    color: #525C60;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: color 0.3s;
+    margin-bottom: 18px;
+}
+
+.contact-link:hover {
+    color: #7EB12D;
+}
+
+/* Стилізація форми */
+.contact-form {
+    flex: 1.5;
+    display: block;
+    /* Змінюємо на 1fr, щоб була лише одна колонка */
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+/* Видаляємо span, щоб Message не розтягувався через дві колонки (яких уже немає) */
+.form-group:nth-child(3),
+.submit-btn {
+    grid-column: auto;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #010400;
+    margin-bottom: 8px;
+    margin-top: 24px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    background: transparent;
+    padding: 8px 0px;
+    border: none;
+    border-bottom: 1px solid rgba(1, 4, 0, 0.15);
+    outline: none;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-bottom: 1px solid rgba(1, 4, 0, 0.8);
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Кнопка */
+.submit-btn {
+    background: #1a5901;
+    color: #fff;
+    grid-column: span 2;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #1a5901;
+    cursor: pointer;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 32px;
+    margin-top: 24px;
+    /* Кнопка по контенту */
+}
+
+.submit-btn:hover {
+    background-color: #1a5901;
+    
+}
+.submit-btn:focus {
+    color: #010400;
+}
+
+.form-image-wrapper {
+    width: 100%;
+    height: 343px;
+
+}
+.contact-form-icon {
+    width: 100%;
+    height: 343px;
+    display: block;
+    object-fit: cover;
+}

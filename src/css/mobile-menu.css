@@ -1,5 +1,10 @@
-body.no-scroll {
+/* Блокуємо скрол на body, коли всередині є відкрите меню */
+body:has(.mobile-menu.is-open) {
   overflow: hidden;
+}
+button {
+  border: none;
+  background-color: transparent;
 }
 .mobile-menu {
   position: fixed;
@@ -14,12 +19,10 @@ body.no-scroll {
 }
 .mobile-nav-link {
   font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.2;
-  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
   color: #ffffff;
-  text-decoration: none;
   transition: color 250ms ease;
 }
 
@@ -38,7 +41,8 @@ body.no-scroll {
   .mobile-menu-container {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    /* height: 812px;
+    width: 286px; */
     padding: 16px 16px 40px 16px;
   }
 
@@ -76,6 +80,7 @@ body.no-scroll {
 @media screen and (min-width: 768px) {
   .mobile-menu {
     width: 286px; /* Ширина самого меню на планшеті */
+    height: 812px;
   }
 
   .mobile-menu-logo {

@@ -1,4 +1,8 @@
 /* #region Common */
+button {
+  border: none;
+  background-color: transparent;
+}
 .container {
   /* дебаг-код (рамка) */
   outline: 2px solid orange;
@@ -27,12 +31,9 @@
   height: 60px;
   object-fit: contain;
 }
-/* Order button */
-/* --- БАЗОВІ СТИЛІ (Mobile) --- */
-
-/* Спочатку ховаємо посилання */
 .order-link {
   display: none;
+  padding: 16px 0; /* добавляю зверху знизу паднг для збільшення клікабельної області */
 }
 /* Контейнер для правої частини */
 .header-actions {
@@ -86,6 +87,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-block: 4px;
+    padding-inline: 24px;
 
     width: 92px;
     height: 32px;
@@ -104,6 +107,9 @@
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  padding-block: 4px;
+  padding-inline: 24px;
 
   .order-link:hover,
   .order-link:focus {
@@ -142,18 +148,17 @@
 
   .nav-list {
     display: flex;
-    gap: 20px;
+    gap: 32px;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 16px 0; /* добавляю зверху знизу паднг для збільшення клікабельної області */
   }
 
   .nav-link {
-    text-decoration: none;
     color: #ffffff;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.2;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 

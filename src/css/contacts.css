@@ -1,5 +1,5 @@
 .contacts.section {
-    padding: 100px 0;
+    
     background-color: #f9f8f8;
     color: #010400;
     
@@ -10,7 +10,6 @@
 .subtitle {
     display: block;
     color: #010400;
-    font-family: "Public Sans", sans-serif;
     font-size: 16px;
     line-height: 1.5;
     font-weight: 600;
@@ -19,7 +18,6 @@
 
 .title {
     color: #010400;
-    font-family: 'Chivo', sans-serif;
     font-size: 36px;
     font-weight: 400;
     line-height: 1.2;
@@ -42,7 +40,7 @@
     width: 100%;
     gap: 32px;
     
-    margin-top: 40px;
+   
 }
 
 .contacts-left-side,
@@ -67,7 +65,7 @@
 }
 
 .method-item {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .contact-link {

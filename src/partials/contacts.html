@@ -46,11 +46,32 @@
         </form>
       </div>
       <div class="form-image-wrapper">
-        <img
-          class="contact-form-icon"
-          src="../img/contacts/contacts-mob.jpg"
-          alt="friendli team"
-        />
+        <picture>
+          <source
+            media="(min-width: 1440px)"
+            srcset="
+              ../img/contacts/contacts-dt.jpg    1x,
+              ../img/contacts/contacts-dt@2x.jpg 2x
+            "
+          />
+
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ../img/contacts/contacts-tab.jpg    1x,
+              ../img/contacts/contacts-tab@2x.jpg 2x
+            "
+          />
+
+          <img
+            class="contact-form-icon"
+            src="../img/contacts/contacts-mob.jpg"
+            srcset="../img/contacts/contacts-mob@2x.jpg 2x"
+            alt="friendly team"
+            width="343"
+            height="343"
+          />
+        </picture>
       </div>
     </div>
   </div>

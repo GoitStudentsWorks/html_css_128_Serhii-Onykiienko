@@ -177,7 +177,10 @@
     }
 }
 
-@media screen and (min-width: 1158px) {
+
+
+
+@media screen and (min-width: 1440px) {
     .contacts-content {
         flex-direction: row;
         align-items: stretch;
@@ -192,7 +195,7 @@
         height: 100%;
         flex-direction: column;
         justify-content: space-between;
-        height: 757px;
+        /* height: 757px; */
     }
         .contacts-header {
             width: 644px;

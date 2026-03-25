@@ -1,78 +1,95 @@
 <section class="contacts section" id="contacts">
-  <div class="container">
-    <div class="contacts-content">
-      <div class="contacts-left-side">
-        <div class="contacts-header">
-          <p class="subtitle">Contacts</p>
-          <h2 class="title">Get in Toush</h2>
-          <p class="title-text">We'd love to hear from you anytime!</p>
-        </div>
-        <div class="contacts-methods">
-          <div class="method-item">
-            <a href="mailto:hello@organicstore.com" class="contact-link">
-              <svg class="contact-icon" width="20" height="16">
-                <use href="../img/sprite.svg#icon-mail"></use>
-              </svg>
-              <p>hello@organicstore.com</p>
-            </a>
-          </div>
-          <div class="method-item">
-            <a href="tel:+15553291024" class="contact-link">
-              <svg class="contact-icon" width="20" height="16">
-                <use href="../img/sprite.svg#icon-phone"></use>
-              </svg>
-              <p>+1 (555) 329-1024</p>
-            </a>
-          </div>
-        </div>
-
-        <form class="contact-form">
-          <div class="form-group">
-            <label>Name</label>
-            <input type="text" placeholder="Sarah" required />
-          </div>
-
-          <div class="form-group">
-            <label>Email</label>
-            <input type="email" placeholder="hello@organic.com" required />
-          </div>
-
-          <div class="form-group">
-            <label>Message</label>
-            <textarea placeholder="Type your message..."></textarea>
-          </div>
-
-          <button type="submit" class="submit-btn">Submit</button>
-        </form>
+  <!-- Контейнер теперь сам управляет сеткой (flex) -->
+  <div class="container contacts-content">
+    <div class="contacts-left-side">
+      <div class="contacts-header">
+        <!-- Теперь это заголовок h3 -->
+        <h3 class="subtitle">Contacts</h3>
+        <h2 class="title">Get in Touch</h2>
+        <p class="title-text">We'd love to hear from you anytime!</p>
       </div>
-      <div class="form-image-wrapper">
-        <picture>
-          <source
-            media="(min-width: 1440px)"
-            srcset="
-              ../img/contacts/contacts-dt.jpg    1x,
-              ../img/contacts/contacts-dt@2x.jpg 2x
-            "
-          />
 
-          <source
-            media="(min-width: 768px)"
-            srcset="
-              ../img/contacts/contacts-tab.jpg    1x,
-              ../img/contacts/contacts-tab@2x.jpg 2x
-            "
-          />
-
-          <img
-            class="contact-form-icon"
-            src="../img/contacts/contacts-mob.jpg"
-            srcset="../img/contacts/contacts-mob@2x.jpg 2x"
-            alt="friendly team"
-            width="343"
-            height="343"
-          />
-        </picture>
+      <div class="contacts-methods">
+        <div class="method-item">
+          <a href="mailto:hello@organicstore.com" class="contact-link">
+            <svg class="contact-icon" width="20" height="16">
+              <use href="../img/sprite.svg#icon-mail"></use>
+            </svg>
+            <p>hello@organicstore.com</p>
+          </a>
+        </div>
+        <div class="method-item">
+          <a href="tel:+15553291024" class="contact-link">
+            <svg class="contact-icon" width="20" height="16">
+              <use href="../img/sprite.svg#icon-phone"></use>
+            </svg>
+            <p>+1 (555) 329-1024</p>
+          </a>
+        </div>
       </div>
+
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="user-name">Name</label>
+          <input
+            type="text"
+            id="user-name"
+            name="user-name"
+            placeholder="Sarah"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="user-email">Email</label>
+          <input
+            type="email"
+            id="user-email"
+            name="user-email"
+            placeholder="hello@organic.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="user-message">Message</label>
+          <textarea
+            id="user-message"
+            name="user-message"
+            placeholder="Type your message..."
+          ></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+
+    <div class="form-image-wrapper">
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcset="
+            ../img/contacts/contacts-dt.jpg    1x,
+            ../img/contacts/contacts-dt@2x.jpg 2x
+          "
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            ../img/contacts/contacts-tab.jpg    1x,
+            ../img/contacts/contacts-tab@2x.jpg 2x
+          "
+        />
+        <img
+          class="contact-form-icon"
+          src="../img/contacts/contacts-mob.jpg"
+          srcset="../img/contacts/contacts-mob@2x.jpg 2x"
+          alt="friendly team"
+          width="343"
+          height="343"
+          loading="lazy"
+        />
+      </picture>
     </div>
   </div>
 </section>

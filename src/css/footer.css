@@ -18,8 +18,8 @@
 .footer-logo-icon {
     fill: #fff;
     display: block;
-    width: 73px;
-    height: 36px;
+    width: 162px;
+    height: 70px;
 }
 
 .footer-nav-list {
@@ -98,17 +98,24 @@
 }
 
 @media only screen and (min-width: 1440px) {
-    .footer .container {
+    .footer-logo-icon {
+        width: 84px;
+        height: 36;
+    }
+    .footer-nav-list {
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
         text-align: left;
+        margin-bottom: 0;
     }
 
     .footer-logo {
         margin-bottom: 0;
     }
-
+    .footer-nav-list {
+        margin-bottom: 0;
+    }
     .footer-nav {
         flex: 1;
         display: flex;

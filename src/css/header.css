@@ -25,6 +25,7 @@ button {
   display: block;
   width: 142px; /* Розмір з Figma */
   height: 60px;
+  fill: #fff;
   /* object-fit: contain; accept comment*/
 }
 .order-link {
